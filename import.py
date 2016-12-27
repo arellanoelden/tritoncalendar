@@ -118,10 +118,10 @@ def get_calendar(service, calendar_name):
     return calendar_id
 
 
-#uname = input("Username: ")
-#pword = getpass()
+#uname = input("Username: ");
+#pword = getpass();
 
-form = tritoncalendar.FieldStorage();
+form = cgi.FieldStorage();
 uname = form.getvalue('uname');
 pword = form.getvalue('pword');
 
