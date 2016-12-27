@@ -118,8 +118,8 @@ def get_calendar(service, calendar_name):
     return calendar_id
 
 
-uname = input("Username: ")
-pword = getpass()
+#uname = input("Username: ")
+#pword = getpass()
 
 form = tritoncalendar.FieldStorage();
 uname = form.getvalue('uname');
