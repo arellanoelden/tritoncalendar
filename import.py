@@ -9,6 +9,7 @@ import datetime
 import oauth2client
 from oauth2client import client
 from oauth2client import tools
+import cgi
 
 SCOPES = 'https://www.googleapis.com/auth/calendar'
 LOGIN_URL = "https://a4.ucsd.edu/tritON/Authn/UserPassword"
@@ -119,6 +120,10 @@ def get_calendar(service, calendar_name):
 
 uname = input("Username: ")
 pword = getpass()
+
+form = tritoncalendar.FieldStorage();
+uname = form.getvalue('uname');
+pword = form.getvalue('pword');
 
 credentials = get_credentials()
 http = credentials.authorize(httplib2.Http())
